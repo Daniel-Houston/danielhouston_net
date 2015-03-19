@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# usage: validate <account-db> <username> <password>
+
+# This program will validate a user's login against
+# a salted, hashed password database.
+
+# An example account-db is provided in ../data/accounts.db
+
+# The format of an account database is:
+
+# <username>:<salt>:<salted-hashed-shasum-password>
+
+# Given a password PASS and a salt SALT, the command-line
+# utility shasum can compute its salted hash:
+
+# $ echo -n PASS:SALT | shasum
+
+# For instance, the password "foobar" with salt "500" yields:
+
+# $ echo -n foobar:500 | shasum 
+# 8a8cafed972dff26d81e4b9542334a303f3821e2  -
+
+# Thus, if user "matt" had the password "foobar", there would
+# be this line in the accounts database:
+
+# matt:500:8a8cafed972dff26d81e4b9542334a303f3821e2
+
+# Salted, hashed passwords are a way of storing a password so
+# that authentication is possible, but the password is unknown
+# even to the server itself.
+
+# If the login is valid, the script should print "valid" and
+# exit with status 0.
+
+# If the login is not valid, the script should print "invalid"
+# and exit with status 1.
+
+# You can assume that there will only be one entry for a given username.
+
+# WARNING: In practice, you need to use something stronger than shasum these
+# days, but some salting and hashing is better than none at all.
+
+
+# Usage:
+if [[ ! -n "$3" ]]
+then
+	echo "usage `basename $0` <account-db> <username> <password>"
+fi
+
+# Get the username and some needed variables.
+username="$2"
+salt=$(cat "$1" | grep "$2" | awk -F ':' '{print $2}')
+hash=$(cat "$1" | grep "$2" | awk -F ':' '{print $3}')
+password="$3"
+
+# Now check the shasum of the password they gave you and the salt you found. 
+tempHash=$(printf "%s" "$password:$salt" | shasum | awk '{print $1}')
+
+# If the hashes are the same, then it is valid, otherwise it isn't
+if [[ "$tempHash" == "$hash" ]]
+then
+  echo "valid"
+  exit 0
+else
+  echo "invalid"
+  exit 1
+fi
+

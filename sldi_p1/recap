@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Assume a list of names enters STDIN.
+
+# Print a list of properly recapitalized names on STDOUT.
+
+# Each input name will match the following regex:
+
+# [A-Za-z]+( [A-Za-z]+\.?)? [A-Za-z]+( [A-Za-z]+)*(-[A-Za-z]+)?
+
+# Here are the rules for capitalization in multiword last names:
+
+#  "del" or "de la" preceeding another name should remain lowercase.
+#  ex: daniel de la pava => Daniel de la Pava
+
+#  "von" preceeding another name should remain lowercase.
+#  ex: bill von ouster => Bill von Ouster
+
+#  "Van" preceeding another name should be capitalized.
+#  ex: david van horn => David Van Horn
+
+#  Hyphenated last names should have both name capitalized.
+#  ex: mike basen-mitchell => Mike Basen-Mitchell
+#  ex: simon peyton-jones => Simon Peyton-Jones
+
+#  For all other multiword last names, capitalize each word.
+
+# Read names one line at a time using sed
+
+while read line; 
+do
+  # Get the name in lowercase and then uppercase the first letters of every name.
+  name=$(printf "%s" "$line" | tr [A-Z] [a-z] | sed -r 's/\b./\U&\E/g')
+ 
+  # Print the first name as it is since there are no special cases. 
+  firstName=$(printf "%s" "$name" | awk '{ print $1 }')
+  printf "%s " "$firstName"
+
+  # Check for special cases 
+  middleStuff=$(printf "%s" "$name" | awk '{for (i=2; i < NF; i++) printf $i " " }' | sed -r 's/\bVon[ ]/von /' | sed -r 's/\bDel[ ]/del /' | sed -r 's/\bDe[ ]La[ ]/de la /')
+
+
+  printf "%s" "$middleStuff"
+  printf "%s" "$name" | awk '{print $NF}' 
+
+#echo ""
+
+done
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Find the five largest subdirectories of the current directory:
+du --max-depth=1 | sort -rn | awk 'NR>=2&&NR<=6' | cut -f 2
+
+

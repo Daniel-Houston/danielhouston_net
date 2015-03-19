@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Search all subdirectories of the current subdirectory.
+
+# If there are two (or more) files with identical file contents both named
+# .mp3, print the path to each of them.
+
+# To do this efficiently, you may want to use md5sum.
+
+# Create a temp file to hold all md5 sums along with the filenames.
+touch mp3Dups_temp
+
+# First we need to get the md5sum of all *.mp3 files
+for file in $(find . -name '*.mp3' -type f )
+do
+  fileHash=$( md5sum $file | awk '{print $1}')
+  printf "%s\n" "$fileHash $file"
+done > mp3Dups_temp
+
+#sort mp3Dups_temp | uniq --skip-fields=2 mp3Dups_temp
+# Then read in each filename and hash, and compare the hash with the other hashes in the file.
+while read line; 
+do 
+  fileHash=$(printf "%s" "$line" | awk '{print $1}')
+  fileName=$(printf "%s" "$line" | awk '{print $2}')
+  
+  
+  while read line;
+  do
+    # If the hashes are the same and the filenames are not then print out the duplicate file.  
+    compareHash=$(printf "%s" "$line" | awk '{print $1}')
+    compareName=$(printf "%s" "$line" | awk '{print $2}')
+    
+    if [[ "$fileHash" == "$compareHash" && "$fileName" != "$compareName" ]]
+    then
+      printf "%s\n" "$fileName"
+      break;
+    fi
+  done < mp3Dups_temp
+done < mp3Dups_temp | sort
+rm -f mp3Dups_temp 

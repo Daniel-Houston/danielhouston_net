@@ -1,0 +1,161 @@
+<?php require 'main_head.php';?>
+<?php require 'navbar.php';?>		
+
+<div class="container">     
+	<div class="row">        
+		<div class="box">           
+			<div class="col-lg-12">     
+				<hr class="page-title">            
+				<h2 class="intro-text text-center bc-header">Resume <strong>Daniel Houston</strong></h2>    
+				<hr class="page-title">				
+				<p>I am currently employed as a web developer at <a target="blank" href="http://www.visibleequity.com">Visible Equity, LLC</a>. They perform loan portfolio analysis for financial and credit institutions. I work on the front end of their enterprise application. I mostly work in HTML, CSS, and Javascript. We use the Bootstrap framework for our front end and I am very familiar with its classes and styles.</p>					
+				<p>My career goals are to be involved in developing Educational Technology. Once I graduate with my bachelor's degree I plan on going to work in industry for 10 to 15 years. Once I feel experienced enough I will return to school to get my PhD in order to teach and do research at a university.</p>									
+				<h4 class="text-center">
+					<a href="./pdfs/Daniel_Houston_Resume.pdf" target="blank" >Here is a Link to my Resume (PDF)</a>
+				</h4>
+				<div class="">
+					<a href="#visibleEquity">Visible Equity</a> | <a href="#sideProjects">Side Projects</a> | <a href="#schoolProjects">School Projects</a>
+				</div>                				
+				<div class="clearfix"></div>	
+			</div>		
+		</div>	
+	</div>		
+	<div class="row">
+		<div class="box" id="visibleEquity">	
+			<div class="col-lg-12">			
+				<hr class="page-title">		
+				<h2 class="intro-text text-center bc-header" >Visible Equity</h2>				
+				<hr class="page-title">				
+			</div>			
+			<div class="col-sm-12 text-center">	
+			<p>I began working at Visible Equity in September 2013.</p>	
+			</div>			
+			<div class="clearfix"></div>	
+		</div>
+	</div>	
+	<div class="row">		
+		<div class="box" id="sideProjects">		
+			<div class="col-lg-12">			
+				<hr class="page-title">		
+				<h2 class="intro-text text-center bc-header" >Side Projects</h2>
+				<hr class="page-title">	
+			</div>			
+			<div class="col-sm-12">			
+				<div class="panel-group">		
+					<div class="panel panel-default">		
+						<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#surveyAppBody">		
+							<h4>Survey Application</h4>				
+						</div>					
+						<div id="surveyAppBody" class="panel-collapse collapse">
+							<div class="panel-body">							
+								<p>I started doing research with Sarah Davies, a Ph.D student in the Educational Psychology department at the University of Utah, in the Spring of 2014. My first task was to build a survey application that would print the answers in a delineated .csv file. She wanted something that just ran locally on her machine and not on the cloud. This survey application is what I build for it. It is written in C# as a Windows Forms Application. Feel free for fork and use this code for any application you may need. </p>
+								<a href="https://github.com/Daniel-Houston/survey_app">Source Code At GitHub.com</a>
+							</div>						
+						</div>				
+					</div>
+				</div>		
+			</div>			
+			<div class="clearfix"></div>
+		</div>	
+	</div>		 
+	<div class="row">
+		<div class="box" id="schoolProjects">   
+				<div class="col-lg-12">            
+					<hr class="page-title">   
+					<h2 class="intro-text text-center bc-header" >School Projects</h2>               
+					<hr class="page-title">               
+				</div>                
+			<div class="col-sm-12 text-center"> 
+				<p>These are all of the classes I have taken. Each class has a link to the source code for every assignment given. Significant assignments are noted.</p>               
+			</div>	
+			<div class="panel-group">
+				<div class="panel panel-default">	
+					<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#5961Body">
+						<h4>CS 5961, Scripting Language Design (Spring 2014)</h4>				
+					</div>			
+					<div id="5961Body" class="panel-collapse collapse">			
+						<div class="panel-body">						
+							<h5>Professor: Matt Might, <a href="matt.might.net">Website</a></h5>
+							<p>An in-depth look at what constitutes sound design principles for scripting languages and the engineering principles behind scripting language implementation. <a href="matt.might.net/teaching/scripting-languages/spring-2014/">Class Syllabus</a></p>	
+							<a href="sldi_unix_scripts.php"><h3>Unix scripting</h3></a>	
+							<a href="sldi_regex_parse.php"><h3>Regular Expresion Parsing using Derivatives</h3></a>
+						</div>		
+					</div>			
+				</div>			
+				<div class="panel panel-default">	
+					<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#3505Body">
+						<h4>CS 3505, Software Practice II (Spring 2014) </h4>		
+					</div>				
+					<div id="3505Body" class="panel-collapse collapse">		
+						<div class="panel-body">				
+							<h5>Professor: Peter Jensen</h5>	
+							<p>An in-depth study of traditional software development (using UML) from inception through implementation.  The entire class is team-based, and will include a project that uses an agile process.</p>			
+							<a href="warehouse_manager.php"><h3>Warehouse Management</h3></a>
+						</div>		
+					</div>			
+				</div>				
+				<div class="panel panel-default">
+					<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#3500Body">	
+						<h4>CS 3500, Software Practice I (Fall 2013) </h4>			
+					</div>						
+					<div id="3500Body" class="panel-collapse collapse">			
+						<div class="panel-body">	
+							<h5>Professor: H. James de St. Germain</h5>	
+							<p> Practical exposure to the process of creating large software systems, including requirements specifications, design, implementation, testing, and maintenance. Emphasis on software process, software tools (debuggers, profilers, source code repositories, test harnesses), software engineering techniques (time management, code, and documentation standards, source code management, object-oriented analysis and design), and team development practice. </p>	
+							<a href="spreadsheet.php"><h3>A spreadsheet in C#</h3></a>	
+							<a href="boggle.php"><h3>Boggle</h3></a>				
+						</div>		
+					</div>			
+				</div>			
+				<div class="panel panel-default">		
+					<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#3810Body">
+						<h4>CS 3810, Computer Organization (Fall 2013) </h4>					
+					</div>					
+					<div id="3810Body" class="panel-collapse collapse">	
+						<div class="panel-body">						
+							<h5>Professor: Peter Jensen</h5>			
+							<p>An in-depth study of computer architecture and design, including topics such as RISC and CISC instruction set architectures, CPU organizations, pipelining, memory systems, input/output, and parallel machines.  Emphasis is placed on performance measures and compilation issues.</p>				
+							<a href="cache_design.php"><h3>Simulating caching for a processor.</h3></a>	
+						</div>		
+					</div>			
+				</div>			
+				<div class="panel panel-default">			
+					<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#2420Body">
+						<h4>CS 2420, Intro to Algorithms and Data Structures (Summer 2013)</h4>		
+					</div>						
+					<div id="2420Body" class="panel-collapse collapse">			
+						<div class="panel-body">			
+							<h5>Professor: Paymon Saebi</h5>
+							<p>An introduction to classical algorithms (including sorting, searching, and graph traversal), data structures (including stacks, queues, linked lists, trees, hash tables, and graphs), and analysis of program space and time requirements. </p>					
+						</div>		
+					</div>			
+				</div>				
+				<div class="panel panel-default">
+					<div class="panel-heading accordion-pointer" data-toggle="collapse" data-target="#1410Body">
+						<h4>CS 1410, Object-Oriented Programming (Spring 2013)</h4>			
+					</div>				
+					<div id="1410Body" class="panel-collapse collapse">	
+						<div class="panel-body">						
+						<h5>Professor: Peter Jensen</h5>			
+						<p>An introduction to Object-Oriented Programming using <b>Java</b></p>		
+					</div>			
+				</div>			
+			</div>			
+		</div>              
+		<div class="clearfix"></div>       
+	</div>        
+</div>   
+</div>    <!-- /.container -->	    
+<footer>     
+<div class="container">        
+	<div class="row">               
+		<div class="col-lg-12 text-center">  
+			<p>Copyright &copy; Daniel Houston 2013</p>            
+		</div>           
+	</div>       
+</div>    
+</footer>    
+<!-- JavaScript -->    
+<script src="js/jquery-1.10.2.js"></script>    <script src="js/bootstrap.js"></script>
+</body>
+</html>

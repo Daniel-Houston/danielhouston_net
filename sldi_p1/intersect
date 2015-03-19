@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# If $1 and $2 are file names, output the lines they have in common.
+
+# You may not assume that these files have been sorted.
+
+# You may output each line only once, and the order does not matter.
+
+# Check usage:
+if [[ ! ( -n "$1" && -n "$2") ]]
+then
+	echo "usage: `basename $0` file1 file2"
+	exit 1
+fi
+
+# Print lines in common:
+# These temp files are used to sort both input files before comparing them
+touch temp1 temp2;
+
+sort "$1" > temp1;
+sort "$2" > temp2;
+
+# Now because they're sorted we can compare them. 
+comm -12 temp1 temp2 | sort -n
+
+# Now remove the temporary files
+rm temp1 temp2;
+

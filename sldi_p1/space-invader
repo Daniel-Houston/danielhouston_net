@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# For all files in the current directory, replace
+# any spaces in file names with underscores.
+
+# If performing the rename would clash with an existing file,
+# do not rename the file and print a warning on stderr.
+
+
+# First I need to get each file in the current directory. 
+for file in ./*;
+do
+  # If the filname has a space in it. 
+  if [[ "$file" == *[[:space:]]* ]]
+  then
+    # Then replace all spaces with underscores. 
+    file_name=${file:2}
+    new_file_name="$(echo -n "$file_name" | sed -e 's/[[:space:]]/_/g')";
+   
+    # Check to be sure that a filename isn't already there. 
+    if ! ls | grep -q "$new_file_name" ;
+    then
+      mv "$file" "$new_file_name";
+    else
+      echo "Warning: $file_name cannot be renamed because $new_file_name already exists." >&2
+    fi
+  fi
+done; 
+

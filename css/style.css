@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+hr.resume-rule{
+	border: 2px dotted grey;
+	margin-top: 2px;
+}
+
+div.accordion-pointer{
+	cursor:pointer;
+}

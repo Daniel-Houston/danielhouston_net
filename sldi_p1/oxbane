@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This script should output all words in 
+# /usr/share/dict/words that have x as their second letter
+# and n as the second-to-last letter.
+
+# Go through the file using awk to find any strings that match the regular expression
+awk '/^(.x.*n.)$/ {print}' /usr/share/dict/words

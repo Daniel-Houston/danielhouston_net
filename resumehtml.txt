@@ -1,0 +1,92 @@
+<h5>Education</h5>
+					<hr class="resume-rule">
+					<div class="row">
+						<div class="col-sm-4"><i>The University of Utah</i></div>					
+						<div class="col-sm-4">Salt Lake City, UT</div>
+						<div class="col-sm-4">May 2016 (anticipated grad)</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">Major: Computer Science B.S.</div>
+						<div class="col-sm-6"><b>GPA 4.0</b></div>
+					</div>
+					<ul>
+						<li>Recipient of the Presidential Scholarship (four-year full tuition)</li>
+						<li>President of the University of Utah Institute Choir</li>
+					</ul>
+<div class="row">
+						<div class="col-sm-4">Davis High School</div>					
+						<div class="col-sm-4">Kaysville, UT</div>
+						<div class="col-sm-4">June 2010</div>
+					</div>
+					<ul>
+						<li><b>Student Body President</b>, Track and Field, Theater, Jazz Band</li>
+						<li><b>GPA 4.0 ACT 34</b></li>
+					</ul>
+ 							           		          	                	
+					           		       
+
+					</div>
+					
+					<h5>Skills</h5>
+					<hr class="resume-rule">
+					<ul>
+						<li>Programming Languages: Java, C#, C++, C, Familiar with shell scripting, sed, and awk. </li>
+						<li>Experienced with front end web development (<b>HTML5, CSS3, Bootstrap3, Javascript, JQuery</b>)</li>
+						<li>Familiar with <b>SQL</b> Database queries</li>
+						
+					</ul>
+						
+					
+					<h5>Programming Experience</h5>
+					<hr class="resume-rule">
+Internship
+Visible Equity LLC						Midvale, UT				       Start Date: October 2013
+Front-end Web Developer
+Assumed Duties:
+* Manage and update aspects of the HTML and CSS of the current website
+* Increase interactivity of the website using Javascript and JQuery
+
+The University of Utah
+Software Practice										 	            August 2013 - present
+* Programming in C# using Microsoft Visual Studio
+* Learning to connect to and use a Subversion version control repository 
+
+Introduction to Algorithms and Data Structures					         			       May 2013 – August 2013
+* Built, Timed, and analyzed Big-O complexity of algorithms and operations in data structures to ensure scalability
+* All assignments were in a paired-programming environment
+* Test and time code using the JUnit package 
+
+Object-Oriented Programming								    	       January 2013– May 2013
+* Learned the basics of Object-Oriented programming including inheritance, polymorphism, and encapsulation
+* Programmed in Java using the Eclipse IDE 
+
+Other Experience
+Online Web Tutorials (codecademy.com, teamtreehouse.com)
+* Learned and became familiar with the basics of front end web development including HTML5, CSS, Javascript, and JQuery
+
+
+					<h5>Employment Experience</h5>
+					<hr class="resume-rule">
+		The University of Utah Office of Admissions			Salt Lake City, UT	          		          December 2012-September 2013
+International Admissions Clerk
+
+Independent Piano Teacher					 		         		          December 2012-September 2013
+
+Cherry Hill						Kaysville, UT			  	  April 2007-September 2010
+Games Cashier, Food Service, Grounds Crew
+			
+					<h5>Volunteer</h5>
+					<hr class="resume-rule">
+		Missionary Service									    		 October 2010-October 2012
+* Served as a missionary for the Church of Jesus Christ of Latter Day Saints in Cape Town, South Africa
+* Leadership responsibilities: one-on-one training and small group leadership
+* Daily and weekly planning as well as organization, management, and scheduling skills	
+			
+					<h5>Interests</h5>
+					<hr class="resume-rule">
+					Eagle Scout - received August 2005
+Blackbelt from Karate Shin-Toshi - received April 2003 
+Sports – soccer, snowboarding, motorcycle riding, hiking 
+Music – piano, singing, and guitar
+
+                </div>

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Apply rot13 encoding/decoding to STDIN.
+
+# Read a word in, rotate its characters 13 spaces.
+while read word;
+do
+  echo "$word" | tr 'A-Za-z' 'N-ZA-Mn-za-m';
+done
